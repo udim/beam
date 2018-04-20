@@ -43,6 +43,13 @@ sdks/python/apache_beam/portability/api/*pb2*.*
 sdks/python/apache_beam/portability/common_urns.py
 sdks/python/nosetests.xml
 
+# Ignore Bazel files.
+sdks/python/bazel-bin
+sdks/python/bazel-genfiles
+sdks/python/bazel-out
+sdks/python/bazel-python
+sdks/python/bazel-testlogs
+
 # Ignore IntelliJ files.
 **/.idea/**/*
 **/*.iml
