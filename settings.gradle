@@ -16,6 +16,8 @@
  * limitations under the License.
  */
 
+apply from: new File(settingsDir, 'gradle/buildCacheSettings.gradle')
+
 rootProject.name = "beam"
 
 include ":release"

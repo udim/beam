@@ -80,6 +80,7 @@ buildscript {
 apply plugin: "base"
 
 apply plugin: "com.gradle.build-scan"
+// TODO: remove
 // JENKINS_HOME and BUILD_ID set automatically during Jenkins execution
 def isCIBuild = ['JENKINS_HOME', 'BUILD_ID'].every System.&getenv
 if (isCIBuild) {

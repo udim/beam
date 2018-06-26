@@ -1,0 +1,14 @@
+// JENKINS_HOME and BUILD_ID set automatically during Jenkins execution
+ext.isCIBuild = ['JENKINS_HOME', 'BUILD_ID'].every System.&getenv
+
+buildCache {
+    local {
+        enabled = !isCIBuild
+    }
+    remote(HttpBuildCache) {
+        // TODO: URL
+        url = 'http://localhost/cache/'
+        //url = 'https://example.com:8123/cache/'
+        push = true // TODO: isCIBuild
+    }
+}
